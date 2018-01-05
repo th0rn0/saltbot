@@ -1,0 +1,13 @@
+{
+  "name": "salt-bot",
+  "version": "1.4.1",
+  "description": "Salty As Fuck",
+  "main": "bot.js",
+  "author": "Th0rn0",
+  "dependencies": {
+    "capitalize": "^1.0.0",
+    "discord.js": "^11.2.1",
+    "webdict": "^0.1.0",
+    "winston": "^2.4.0"
+  }
+}
