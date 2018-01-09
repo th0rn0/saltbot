@@ -43,6 +43,9 @@ client.on('message', message => {
   if (message.content.indexOf('share da love') != -1 && !joshMute) {
     message.channel.send(':heart: Drury');
   }
+  if (message.content.toLowerCase().indexOf('pubg') != -1) {
+    message.channel.send('DEAD GAME');
+  }
 
   if (message.content.startsWith('/loveme')) {
     var x = Math.round(parseFloat(message.content.split(' ')[1]));
