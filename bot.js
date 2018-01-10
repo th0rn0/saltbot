@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const auth = require('./auth.json');
 const webdict = require('webdict');
+const giphy = require('giphy-api')(auth.giphy);
 
 var capitalize = require('capitalize')
 var db = {};
@@ -11,7 +12,7 @@ db['salt'] = 0;
 
 client.on('ready', () => {
   console.log('I am ready!');
-  client.user.setGame('with ur mam');
+  client.user.setGame('knives');
 });
 
 
@@ -105,6 +106,16 @@ client.on('message', message => {
       joshMute = true;
       message.channel.send('Muted.');
     }
+  }
+
+  if (message.content.startsWith('/gif')) {
+    var str = message.content.substring(5);
+    // Search with options using promise 
+    giphy.random(str).then(function (res) {
+        // Res contains gif data! 
+        console.log(res.data.image_url);
+        message.channel.send(res.data.image_url);
+    });
   }
   
 });
