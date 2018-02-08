@@ -36,10 +36,32 @@ client.on('message', message => {
 		message.channel.send(array['salt']);
 		return;
 	}
+	if (message.content.startsWith('/mutejosh')) {
+		if (joshMute) {
+			joshMute = false;
+			message.channel.send('Unmuted.');
+		} else {
+			joshMute = true;
+			message.channel.send('Muted.');
+		}
+	}
+	if (message.content.startsWith('/celebrateJosh')) {
+		message.channel.send('WEW LAD CONGRATS');
+		message.channel.send('WEW LAD CONGRATS');
+		message.channel.send('WEW LAD CONGRATS');
+		message.channel.send('WEW LAD CONGRATS');
+		message.channel.send('WEW LAD CONGRATS');
+		message.channel.send('WEW LAD CONGRATS');
+		message.channel.send('WEW LAD CONGRATS');
+		message.channel.send('WEW LAD CONGRATS');
+		message.channel.send('WEW LAD CONGRATS');
+		message.channel.send('WEW LAD CONGRATS');
+		message.channel.send('WEW LAD CONGRATS');
+		message.channel.send('WEW LAD CONGRATS');
+	}
 	if (message.content.indexOf('salt') != -1) {
 		array['salt']++;
 		message.react(saltEmoji.id)
-		saltIncrement('asdasdasd');
 	}
 	if (message.content.toLowerCase().indexOf('josh') != -1 && !joshMute && !message.content.startsWith('/mutejosh')) {
 		message.reply('Psst... Did you know, Josh went :one::heavy_minus_sign::one::one:, the salty cunt.');
@@ -112,15 +134,7 @@ client.on('message', message => {
 	if (message.content.startsWith('/nastytest')) {
 		message.channel.send('@Pebble™#9228');
 	}
-	if (message.content.startsWith('/mutejosh')) {
-		if (joshMute) {
-			joshMute = false;
-			message.channel.send('Unmuted.');
-		} else {
-			joshMute = true;
-			message.channel.send('Muted.');
-		}
-	}
+	
 
 	if (message.content.startsWith('/mildban')) {
 		var str = message.content.substring(9);
@@ -149,6 +163,46 @@ client.on('message', message => {
 				message.channel.send(res.data.image_url);
 		});
 	}
+
+	var serverOwnerReplies = [
+		":crown: ALL :clap: HAIL :clap: KING :clap: LUCAS! :crown:",
+		"EYUP! THA KING IS ERE",
+		"King of the Rats has arrived",
+		"Quiet down peasents, King Lucas is speaking :crown:",
+		"I am here to please our Lord Lucas :crown:"
+		];
+	var chanceMax = 100;
+	var chanceMin = 1;
+	if ((Math.floor(Math.random() * (chanceMax - chanceMin + 1)) + chanceMin) == 6 && message.author.id == 161576429035716608) {
+		message.channel.send(serverOwnerReplies[Math.floor(Math.random() * serverOwnerReplies.length)]);
+	}
+
+	if (message.content.toLowerCase() == 'who is king?') {
+		var text = '```';
+		text += '\r\n';
+		text += '🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒\r\n';
+		text += '🆒👑🆒🆒🆒🆒🆒🆒👑🆒🆒🆒👑🆒🆒🆒👑👑👑🆒🆒🆒🆒🆒👑🆒🆒🆒🆒🆒👑👑👑👑🆒\r\n';
+		text += '🆒👑🆒🆒🆒🆒🆒🆒👑🆒🆒🆒👑🆒🆒👑🆒🆒🆒👑🆒🆒🆒👑🆒👑🆒🆒🆒👑🆒🆒🆒🆒🆒\r\n';
+		text += '🆒👑🆒🆒🆒🆒🆒🆒👑🆒🆒🆒👑🆒🆒👑🆒🆒🆒🆒🆒🆒👑🆒🆒🆒👑🆒🆒🆒👑👑👑🆒🆒\r\n';
+		text += '🆒👑🆒🆒🆒🆒🆒🆒👑🆒🆒🆒👑🆒🆒👑🆒🆒🆒👑🆒🆒👑👑👑👑👑🆒🆒🆒🆒🆒🆒👑🆒\r\n';
+		text += '🆒👑👑👑👑👑🆒🆒🆒👑👑👑🆒🆒🆒🆒👑👑👑🆒🆒🆒👑🆒🆒🆒👑🆒🆒👑👑👑👑🆒🆒\r\n';
+		text += '🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒🆒\r\n';
+		text += '```';
+		message.channel.send(text);
+	}
+
+	if (message.content.toLowerCase() == 'wat') {
+		message.channel.send('wut');
+	}
+	if (message.content.toLowerCase() == 'wot') {
+		message.channel.send('wat');
+	}
+	if (message.content.toLowerCase() == 'wut') {
+		message.channel.send('wot');
+	}
+
+	// DEBUG
+	// console.log(message.author);
 	
 });
 
