@@ -38,55 +38,6 @@ client.on('message', message => {
 	}
 	if (message.content.toLowerCase().indexOf('@everyone') != -1) {
 		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('Fuck off u cunt');
-		message.reply('11-1 m88888. Never forget');
 	}
 	if (message.content.startsWith('/mutejosh')) {
 		if (joshMute) {
