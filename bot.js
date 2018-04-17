@@ -36,6 +36,9 @@ client.on('message', message => {
 		message.channel.send(array['salt']);
 		return;
 	}
+	if (message.content.toLowerCase().indexOf('@everyone') != -1) {
+		message.reply('Fuck off u cunt');
+	}
 	if (message.content.startsWith('/mutejosh')) {
 		if (joshMute) {
 			joshMute = false;
